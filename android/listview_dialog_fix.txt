@@ -1,0 +1,63 @@
+The issue you're experiencing is that ListView widgets don't work properly in dialogs because they have infinite height constraints. Here's how to solve it:
+
+1. PROBLEM: ListView.builder has infinite height in dialog
+2. SOLUTION: Wrap in SizedBox with fixed height OR use SingleChildScrollView
+
+Here's the corrected approach for your dialog:
+
+// Option 1: Using SizedBox wrapper (Recommended)
+Widget _buildApplePlansInDialog(List<ProductDetails> appleProducts) {
+  return SizedBox(
+    height: 200, // Fixed height for dialog
+    child: ListView.builder(
+      scrollDirection: Axis.horizontal,
+      padding: EdgeInsets.symmetric(horizontal: 8.w),
+      itemCount: appleProducts.length,
+      itemBuilder: (context, index) {
+        // ... your existing itemBuilder code
+      },
+    ),
+  );
+}
+
+// Option 2: Using SingleChildScrollView with Column
+Widget _buildApplePlansInDialog(List<ProductDetails> appleProducts) {
+  return SizedBox(
+    height: 200,
+    child: SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: List.generate(appleProducts.length, (index) {
+          // ... your existing item widget code
+        }),
+      ),
+    ),
+  );
+}
+
+// For centering in dialog, use this AlertDialog structure:
+showDialog(
+  context: context,
+  builder: (BuildContext context) {
+    return AlertDialog(
+      title: Text("Select Plan"),
+      content: Container(
+        width: MediaQuery.of(context).size.width * 0.8, // 80% of screen width
+        child: _buildApplePlansInDialog(appleProducts),
+      ),
+      actions: [
+        TextButton(
+          onPressed: () => Navigator.of(context).pop(),
+          child: Text("Cancel"),
+        ),
+        TextButton(
+          onPressed: () {
+            // Handle selection
+            Navigator.of(context).pop();
+          },
+          child: Text("Select"),
+        ),
+      ],
+    );
+  },
+);

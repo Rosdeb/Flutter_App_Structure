@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "913009379985",
+    "project_id": "pagedrop-7753e",
+    "storage_bucket": "pagedrop-7753e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:913009379985:android:7bf3a6de7d957267d58d30",
+        "android_client_info": {
+          "package_name": "com.pagedrop.lagier"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "913009379985-j842rcqqg90cetjgvabh8lapl5u4q87k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pagedrop.lagier",
+            "certificate_hash": "61fd37520a25d52decaeb64683c96a76951dc112"
+          }
+        },
+        {
+          "client_id": "913009379985-m9mk92j144jahmqn4nbru64a5sigb1va.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUIMmVlNWJOKhSxAzPwqhedtKbI55J5Q8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "913009379985-m9mk92j144jahmqn4nbru64a5sigb1va.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "913009379985-u44ichntkjsjbfk6tn5ch8ekk3u51k2o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.pagedrop.lagier"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

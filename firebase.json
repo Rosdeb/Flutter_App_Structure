@@ -1,0 +1,22 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "pagedrop-7753e",
+          "appId": "1:913009379985:android:749226a2e56509d1d58d30",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "pagedrop-7753e",
+          "configurations": {
+            "android": "1:913009379985:android:749226a2e56509d1d58d30",
+            "ios": "1:913009379985:ios:4aad77742983b5bad58d30"
+          }
+        }
+      }
+    }
+  }
+}
