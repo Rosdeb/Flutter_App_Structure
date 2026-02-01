@@ -17,7 +17,6 @@ migrate_working_dir/
 *.ipr
 *.iws
 .idea/
-.env
 @Qwen_work/
 
 # The .vscode folder contains launch configuration and tasks you configure in
